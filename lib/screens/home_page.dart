@@ -1,20 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:go_router/go_router.dart';
 import 'package:store/models/product_model.dart';
 import 'package:store/services/get_all_product_service.dart';
 import 'package:store/widgets/custom_card.dart';
+import 'package:store/widgets/custom_drawer.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+   HomePage({Key? key}) : super(key: key);
   static String id = 'HomePAge';
+  GlobalKey <ScaffoldState> scaffoldKey = GlobalKey();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: scaffoldKey,
+      drawer: const CustomDrawer(),
       appBar: AppBar(
+        leading: IconButton(onPressed:(){
+          scaffoldKey.currentState!.openDrawer();
+        }, icon: Icon(Icons.list)),
         actions: [
           IconButton(
               onPressed: () {},
-              icon: Icon(
+              icon:const Icon(
                 FontAwesomeIcons.cartPlus,
                 color: Colors.black,
               ))

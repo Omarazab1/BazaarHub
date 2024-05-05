@@ -7,21 +7,22 @@ import 'package:store/services/update_product.dart';
 import 'package:store/utils/App_router.dart';
 
 void main() {
-  runApp(const StoreApp());
+  runApp(const BazaarHub());
 }
 
-class StoreApp extends StatelessWidget {
-  const StoreApp({Key? key}) : super(key: key);
+class BazaarHub extends StatelessWidget {
+  const BazaarHub({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       routes: {
-        HomePage.id : (context) => HomePage(),
+        HomePage.id : (context) =>  HomePage(),
         UpdateProductPage.id : (context) => UpdateProductPage(),
 
       },
-      home: SplashView(),
+      home: const SplashView(),
     );
   }
 }

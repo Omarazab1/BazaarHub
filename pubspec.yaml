@@ -27,12 +27,13 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
-  go_router: ^12.1.0
+
+  persistent_bottom_nav_bar: ^5.0.2
   http: ^0.13.4
   modal_progress_hud_nsn: ^0.1.0-nullsafety-1
 
   font_awesome_flutter: ^9.2.0
-
+  go_router: 
   flutter:
     sdk: flutter
 

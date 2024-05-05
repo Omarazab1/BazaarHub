@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import 'package:store/screens/home_page.dart';
 import 'package:store/widgets/sliding_text.dart';
 
@@ -24,7 +23,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
     initSlidingAnimation();
     Future.delayed(const Duration(seconds: 4), () {
       Navigator.push(context, MaterialPageRoute(builder: (context){
-        return const HomePage();
+        return  HomePage();
       }));
     });
   }
