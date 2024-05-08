@@ -3,19 +3,19 @@ import 'package:store/models/product_model.dart';
 import 'package:store/screens/update_product_page.dart';
 
 class CustomCard extends StatelessWidget {
-
-  CustomCard({
+  const CustomCard({
     required this.product,
     Key? key,
+    required this.press,
   }) : super(key: key);
 
-  ProductModel product;
+  final ProductModel product;
+  final VoidCallback press;
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {
-        Navigator.pushNamed(context, UpdateProductPage.id ,arguments: product);
-      },
+      onTap: press,
       child: Stack(
         clipBehavior: Clip.none,
         children: [
@@ -25,7 +25,7 @@ class CustomCard extends StatelessWidget {
                 blurRadius: 50,
                 color: Colors.grey.withOpacity(.1),
                 spreadRadius: 20,
-                offset: Offset(10, 10),
+                offset: const Offset(10, 10),
               ),
             ]),
             child: Card(
@@ -42,12 +42,12 @@ class CustomCard extends StatelessWidget {
                   children: [
                     Text(
                       product.title.substring(0, 6),
-                      style: TextStyle(
+                      style: const TextStyle(
                         color: Colors.grey,
                         fontSize: 16,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 3,
                     ),
                     Row(
@@ -55,11 +55,11 @@ class CustomCard extends StatelessWidget {
                       children: [
                         Text(
                           r'$' '${product.price.toString()}',
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontSize: 16,
                           ),
                         ),
-                        Icon(
+                        const Icon(
                           Icons.favorite,
                           color: Colors.red,
                         ),
@@ -73,10 +73,13 @@ class CustomCard extends StatelessWidget {
           Positioned(
             right: 32,
             top: -60,
-            child: Image.network(
-              product.image,
-              height: 100,
-              width: 100,
+            child: Hero(
+              tag: product.title,
+              child: Image.network(
+                product.image,
+                height: 100,
+                width: 100,
+              ),
             ),
           )
         ],
