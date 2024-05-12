@@ -1,18 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:store/constants.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return
-       Scaffold(
-        appBar: AppBar(
-          title: Text('Profile'),
-        ),
-        body: ProfileWidget(),
-      );
-
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Profile'),
+      ),
+      body: ProfileWidget(),
+    );
   }
 }
 
@@ -38,20 +37,36 @@ class ProfileWidget extends StatelessWidget {
           ),
           SizedBox(height: 30),
           ListTile(
-            leading: Text('Email' , style: TextStyle(color: Colors.blue , fontSize: 15),),
-            title: Text('oe1186@fayoum.edu.eg',style:  TextStyle(color: Color(0xff919591)),),
-            trailing: Icon(Icons.email_outlined , color: Colors.blue,),
+            leading: Text(
+              'Email',
+              style: TextStyle(color: primaryColor, fontSize: 15),
+            ),
+            title: Text(
+              'oe1186@fayoum.edu.eg',
+              style: TextStyle(color: Color(0xff919591)),
+            ),
+            trailing: Icon(
+              Icons.email_outlined,
+              color: primaryColor,
+            ),
           ),
-          SizedBox(height: 10,),
+          SizedBox(
+            height: 10,
+          ),
           ListTile(
-            leading: Text('Phone' ,style:  TextStyle(color: Colors.blue , fontSize: 15)),
-            title: Text('01018517555',style: TextStyle(color: Color(0xff919591)),),
-            trailing: Icon(Icons.phone,color: Colors.blue,),
+            leading: Text('Phone',
+                style: TextStyle(color: primaryColor, fontSize: 15)),
+            title: Text(
+              '01018517555',
+              style: TextStyle(color: Color(0xff919591)),
+            ),
+            trailing: Icon(
+              Icons.phone,
+              color: primaryColor,
+            ),
           ),
-
         ],
       ),
     );
   }
 }
-

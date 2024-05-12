@@ -44,13 +44,14 @@ class HomePage extends StatelessWidget {
               color: Colors.black,
               size: 35,
             )),
-        actions: [
-          IconButton(
-              onPressed: () {},
-              icon: const Icon(
-                FontAwesomeIcons.cartPlus,
-                color: Colors.black,
-              ))
+        actions: const [
+          Padding(
+            padding: EdgeInsets.all(8.0),
+            child: Icon(
+              FontAwesomeIcons.amazon,
+              color: Colors.black,
+            ),
+          )
         ],
         backgroundColor: bgColor,
         elevation: 0,

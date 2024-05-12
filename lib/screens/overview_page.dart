@@ -17,7 +17,6 @@ class AboutPage extends StatelessWidget {
               style: TextStyle(
                 fontSize: 24.0,
                 fontWeight: FontWeight.bold,
-                color: Colors.blue,
               ),
             ),
             SizedBox(height: 10.0),
@@ -34,7 +33,6 @@ class AboutPage extends StatelessWidget {
               style: TextStyle(
                 fontSize: 16.0,
                 fontWeight: FontWeight.bold,
-                color: Colors.blue
               ),
             ),
             SizedBox(height: 10.0),
