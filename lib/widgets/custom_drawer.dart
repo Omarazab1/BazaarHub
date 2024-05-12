@@ -1,6 +1,8 @@
 
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:go_router/go_router.dart';
+import 'package:store/constants.dart';
 import 'package:store/screens/contact_us.dart';
 import 'package:store/screens/overview_page.dart';
 import 'package:store/screens/profile_page.dart';
@@ -15,32 +17,19 @@ class CustomDrawer extends StatefulWidget {
 }
 
 class _CustomDrawerState extends State<CustomDrawer> {
-  /*List<DrawerItem> items = [
-    DrawerItemModel(
-      title: 'My Profile',
-      icon: Icons.perm_identity,
-      onTap: () => GoRouter.of(context).push(AppRouter.kMyProfile),
-    ),
-    DrawerItemModel(title: 'Devices', icon: Icons.device_unknown, onTap: () {
-          () => GoRouter.of(context).push(AppRouter.kSearchForDevice);
-    }),
-    DrawerItemModel(title: 'Tutorial', icon: Icons.history_edu, onTap: () {}),
-    DrawerItemModel(
-        title: 'Overview', icon: Icons.interests_outlined, onTap: () {}),
-  ];*/
 
   int activeIndex = 0;
 
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      backgroundColor: const  Color(0xffDBDBDB),
+      backgroundColor: bgColor,
       child: Column(
         children: [
-          const  DrawerHeader(
+            const DrawerHeader(
               child: Icon(
-                Icons.shopping_bag_outlined,
-                size: 48,
+                FontAwesomeIcons.shopify,
+                size: 52,
               )),
           ListTile(
             leading: const Icon(Icons.perm_identity) ,
