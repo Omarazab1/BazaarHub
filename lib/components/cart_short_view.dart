@@ -14,7 +14,7 @@ class CardShortView extends StatelessWidget {
       children: [
         Text(
           'Cart',
-          style: Theme.of(context).textTheme.headline6,
+        //  style: Theme.of(context).textTheme.headline6,
         ),
         const SizedBox(width: defaultPadding),
         Expanded(

@@ -5,6 +5,7 @@ class ProductItem {
   int quantity;
   final ProductModel? product;
 
+
   ProductItem({this.quantity = 1, required this.product});
 
   void increment() {

@@ -80,7 +80,7 @@ class _UpdateProductPageState extends State<UpdateProductPage> {
                 const  SizedBox(
                   height: 70,
                 ),
-                CustomButon(
+                CustomButton(
                   text: 'Update',
                   onTap: () async {
                     isLoading = true;

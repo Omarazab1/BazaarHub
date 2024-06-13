@@ -63,4 +63,6 @@ class Api {
           'there is a problem with status code ${response.statusCode} with body ${jsonDecode(response.body)}');
     }
   }
+
 }
+

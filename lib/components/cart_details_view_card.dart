@@ -23,10 +23,10 @@ class CartDetailsViewCard extends StatelessWidget {
       ),
       title: Text(
         productItem.product!.title,
-        style: Theme.of(context)
+       /* style: Theme.of(context)
             .textTheme
             .subtitle1!
-            .copyWith(fontWeight: FontWeight.bold),
+            .copyWith(fontWeight: FontWeight.bold),*/
       ),
       trailing: FittedBox(
         child: Row(
@@ -34,10 +34,10 @@ class CartDetailsViewCard extends StatelessWidget {
             Price(amount: "20"),
             Text(
               "  x ${productItem.quantity}",
-              style: Theme.of(context)
+             /* style: Theme.of(context)
                   .textTheme
                   .subtitle1!
-                  .copyWith(fontWeight: FontWeight.bold),
+                  .copyWith(fontWeight: FontWeight.bold),*/
             )
           ],
         ),
@@ -58,10 +58,10 @@ class Price extends StatelessWidget {
     return Text.rich(
       TextSpan(
         text: "\$",
-        style: Theme.of(context)
+      /*  style: Theme.of(context)
             .textTheme
             .subtitle1!
-            .copyWith(fontWeight: FontWeight.w600, color: primaryColor),
+            .copyWith(fontWeight: FontWeight.w600, color: primaryColor),*/
         children: [
           TextSpan(
             text: amount,

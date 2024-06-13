@@ -25,7 +25,7 @@ class ProductModel {
         image: jsonData['image'],
         rating: jsonData['rating'] == null
             ? null
-            : RatingModel.fromJson(jsonData['rating']));
+            : RatingModel.fromJson(jsonData['rating']));      // send rating map
   }
 }
 
